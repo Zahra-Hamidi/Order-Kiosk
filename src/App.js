@@ -1,5 +1,7 @@
 import { CssBaseline,ThemeProvider ,Container,Paper, createMuiTheme} from "@material-ui/core";
 import HomeScreen from './screens/HomeScreen'
+import { BrowserRouter as Router, Route } from "react-router-dom";
+import ChooseScreen from "./screens/ChooseScreen";
 
 
 const theme = createMuiTheme({
@@ -28,14 +30,17 @@ const theme = createMuiTheme({
 
 function App() {
   return (
-    <ThemeProvider theme={theme}>
-      <CssBaseline/>
-      <Container maxWidth="sm">
-        <Paper>
-          <HomeScreen></HomeScreen>
-        </Paper>
-      </Container>
-    </ThemeProvider>
+    <Router>
+      <ThemeProvider theme={theme}>
+        <CssBaseline/>
+        <Container maxWidth="sm">
+          <Paper>
+            <Route path="/" component={HomeScreen} exact/>
+            <Route path="/choose" component={ChooseScreen} exact/>
+          </Paper>
+        </Container>
+      </ThemeProvider>
+    </Router>
   );
 }
 
