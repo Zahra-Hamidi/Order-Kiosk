@@ -16,6 +16,9 @@ export const useStyles = makeStyles((theme)=>({
     largeLogo:{
         height:100,
     },
+    Logo:{
+        height:50,
+    },
     main:{
         flex:1,
         overflow:'auto',
