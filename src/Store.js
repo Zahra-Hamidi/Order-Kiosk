@@ -1,5 +1,5 @@
 import React, { createContext,useReducer } from 'react'
-import { CATEGORY_LIST_FAIL, CATEGORY_LIST_REQUEST, CATEGORY_LIST_SUCCESS, ORDER_SET_TYPE } from './constant';
+import { CATEGORY_LIST_FAIL, CATEGORY_LIST_REQUEST, CATEGORY_LIST_SUCCESS, ORDER_SET_TYPE, PRODUCT_LIST_FAIL, PRODUCT_LIST_REQUEST, PRODUCT_LIST_SUCCESS } from './constant';
 
 export const Store = createContext();
 
@@ -8,6 +8,7 @@ const initialState = {
         orderType:'Eat in'
     },
     categoryList:{loading:true},
+    productList:{loading:true},
 }
 
 function reducer(state,action){
@@ -28,6 +29,18 @@ function reducer(state,action){
         case CATEGORY_LIST_FAIL:
             return{
                 ...state,categoryList:{loading:false,error:action.payload}
+            }    
+        case PRODUCT_LIST_REQUEST:
+            return{
+                ...state,productList:{loading:true}
+            }    
+        case PRODUCT_LIST_SUCCESS:
+            return{
+                ...state,productList:{loading:false,products:action.payload}
+            }    
+        case PRODUCT_LIST_FAIL:
+            return{
+                ...state,productList:{loading:false,error:action.payload}
             }    
         default: return state;    
     }

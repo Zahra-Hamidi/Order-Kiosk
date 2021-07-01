@@ -44,5 +44,6 @@ export const useStyles = makeStyles((theme)=>({
     space:{padding:10},
     media:{
         width:200
-    }
+    },
+    title:{marginTop:18},
 }))
