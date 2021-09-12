@@ -3,6 +3,7 @@ import HomeScreen from './screens/HomeScreen'
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import ChooseScreen from "./screens/ChooseScreen";
 import OrderScreen from "./screens/OrderScreen";
+import ReviewScreen from "./screens/ReviewScreen";
 
 
 const theme = createMuiTheme({
@@ -39,6 +40,7 @@ function App() {
             <Route path="/" component={HomeScreen} exact/>
             <Route path="/choose" component={ChooseScreen} exact/>
             <Route path="/order" component={OrderScreen} exact/>
+            <Route path="/review" component={ReviewScreen} exact/>
           </Paper>
         </Container>
       </ThemeProvider>
