@@ -4,6 +4,8 @@ import { BrowserRouter as Router, Route } from "react-router-dom";
 import ChooseScreen from "./screens/ChooseScreen";
 import OrderScreen from "./screens/OrderScreen";
 import ReviewScreen from "./screens/ReviewScreen";
+import SelectPaymentScreen from "./screens/SelectPaymentScreen";
+import PaymentScreen from "./screens/PaymentScreen";
 
 
 const theme = createMuiTheme({
@@ -41,6 +43,8 @@ function App() {
             <Route path="/choose" component={ChooseScreen} exact/>
             <Route path="/order" component={OrderScreen} exact/>
             <Route path="/review" component={ReviewScreen} exact/>
+            <Route path="/select-payment" component={SelectPaymentScreen} exact/>
+            <Route path="/payment" component={PaymentScreen} exact/>
           </Paper>
         </Container>
       </ThemeProvider>
