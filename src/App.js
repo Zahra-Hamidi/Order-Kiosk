@@ -6,6 +6,7 @@ import OrderScreen from "./screens/OrderScreen";
 import ReviewScreen from "./screens/ReviewScreen";
 import SelectPaymentScreen from "./screens/SelectPaymentScreen";
 import PaymentScreen from "./screens/PaymentScreen";
+import CompleteOrderScreen from "./screens/CompleteOrderScreen";
 
 
 const theme = createMuiTheme({
@@ -45,6 +46,7 @@ function App() {
             <Route path="/review" component={ReviewScreen} exact/>
             <Route path="/select-payment" component={SelectPaymentScreen} exact/>
             <Route path="/payment" component={PaymentScreen} exact/>
+            <Route path="/complete" component={CompleteOrderScreen} exact/>
           </Paper>
         </Container>
       </ThemeProvider>
